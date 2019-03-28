@@ -6,6 +6,7 @@ import ast
 
 retry_timeout=7
 retry_max_count=3
+notification_url=<provide the webhook url here>
 
 def post_to_data_google_chat(gcmsg):
     """Send Notification to Google chat rooms"""
@@ -31,7 +32,7 @@ def post_to_data_google_chat(gcmsg):
                print ("Failing after " + str(retry_max_count) + " retries")
                print ('Not able to post message to google chat API')
                sys.exit(1)
-        break
+       break
 
 
 
